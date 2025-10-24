@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Home — Golden Heir Holdings</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<header class="header"><div class="container"><h2>Golden Hier Holdings Pty Ltd</h2></div></header>
+<nav><ul><li><a href="index.html">Cover</a></li><li><a class="active" href="home.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+<section class="moving-hero">
+  <div class="moving-inner">
+    <div>
+      <h2>We are <span style="color:var(--gold)">Golden Hier</span>, your partner in</h2>
+      <div class="typewriter" id="typewriter"></div>
+      <p style="color:var(--muted)">Logistics, transport, branding and infrastructure services across South Africa — tailored solutions that deliver.</p>
+    </div>
+    <aside style="background:#0b0b0b;padding:18px;border-radius:10px"><h3 style="margin-top:0">Quick Contact</h3><p><strong>Phone:</strong> <a href="tel:+27796353206">+27 79 635 3206</a></p><p><strong>Email:</strong> <a href="mailto:info@goldenheirholdings.co.za">info@goldenheirholdings.co.za</a></p><a class="btn" href="contact.html">Get in Touch</a></aside>
+  </div>
+</section>
+<section class="cards" aria-label="Services preview">
+  <div class="card"><img src="images/coal-transport.jpg" alt="Coal transport"><h3>Coal Transport</h3><p>Secure and efficient coal logistics across South Africa.</p></div>
+  <div class="card"><img src="images/retail-fmcg.jpg" alt="Retail and FMCG"><h3>Retail & FMCG</h3><p>Distribution and supply-chain solutions for fast-moving consumer goods.</p></div>
+  <div class="card"><img src="images/agriculture-loads.jpg" alt="Agriculture loads"><h3>Agriculture Loads</h3><p>Transporting farm produce and agricultural inputs.</p></div>
+  <div class="card"><img src="images/branding.jpg" alt="Branding services"><h3>Branding & Signage</h3><p>Corporate branding, road signs and professional road markings.</p></div>
+</section>
+<footer class="footer">© 2025 Golden Hier Holdings Pty Ltd</footer>
+<script>
+const phrases = ["Coal Transport","Retail & FMCG Distribution","Agriculture Logistics","Nationwide Delivery","Branding & Signage"];
+let idx=0,char=0;const speed=80,pause=1200;const el=document.getElementById('typewriter');
+function type(){const current=phrases[idx%phrases.length]; if(char<=current.length){el.textContent=current.substring(0,char);char++;setTimeout(type,speed);}else{setTimeout(erase,pause);} }
+function erase(){const current=phrases[idx%phrases.length]; if(char>=0){el.textContent=current.substring(0,char);char--;setTimeout(erase,speed/2);}else{idx++;setTimeout(type,200);} }
+document.addEventListener('DOMContentLoaded',()=>{ type(); });
+</script>
+</body></html>
